@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace Kolsarici.Transformatters.MvcWebUI.Controllers
 {
+    [ValidateInput(false)]
     public class XmlController : Controller
     {
         private IXmlService _xmlService;
@@ -17,7 +18,7 @@ namespace Kolsarici.Transformatters.MvcWebUI.Controllers
             _xmlService = xmlService;
         }
 
-        [ValidateInput(false)]
+        
         public ActionResult Index()
         {
             var model = new BeautifyViewModel
@@ -28,7 +29,6 @@ namespace Kolsarici.Transformatters.MvcWebUI.Controllers
         }
 
         [HttpPost]
-        [ValidateInput(false)]
         public ActionResult Index(Beautify beautify)
         {
             //burda beautify in dolu gelmesi _ViewImport un oluşturulmasıyla oldu
@@ -41,7 +41,6 @@ namespace Kolsarici.Transformatters.MvcWebUI.Controllers
         }
 
         [HttpPost]
-        [ValidateInput(false)]
         public ActionResult BeautifyInNewPage(Beautify beautify)
         {
             if (beautify.Str == null)
