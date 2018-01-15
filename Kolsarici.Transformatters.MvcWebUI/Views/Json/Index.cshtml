@@ -3,6 +3,11 @@
     Layout = "~/Views/_Layout.cshtml";
 }
 <script>
+    function copyToClipboard() {
+        var copyText = document.getElementById("beautifiedTextArea");
+        copyText.select();
+        document.execCommand("Copy");
+    }
     var OpenInNewWindow = {
 
         submit: function (newWindow) {
@@ -23,22 +28,28 @@
 
     }
 </script>
-<div class="container">
-    <div class="row">
-        <form id="form" enctype="multipart/form-data">
-            <div class="form-group">
-                @Html.TextAreaFor(m => m.Beautify.Str, new { @class = "form-control", @rows = "20", id = "first_name" })
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Beautify" class="btn btn-xs btn-success"  onclick="OpenInNewWindow.submit(false)"/>
-                <input type="submit" value="BeautifyInNewPage" class="btn btn-xs btn-success" onclick="OpenInNewWindow.submit(true)" />
-                <input type="button" value="Select Text" class="btn btn-xs btn-info" onClick="javascript:this.form.beautifiedTextArea.focus();this.form.beautifiedTextArea.select();">
-            </div>
-            <div class="form-group">
-                @Html.TextAreaFor(m => m.Beautify.BeautifiedStr, new { @class = "form-control", @rows = "20" })
-            </div>
-        </form>
+
+<form id="form" enctype="multipart/form-data">
+    <div class="col-md-5">
+        <div class="form-group">
+            @Html.TextAreaFor(m => m.Beautify.Str, new { @class = "form-control", @rows = "20", id = "first_name" })
+        </div>
     </div>
-</div>
+    <div class="col-md-1">
+        <div class="form-group">
+            <div class="btn-group-vertical">
+                <input type="submit" value="Beautify" class="btn btn-xs btn-info" onclick="OpenInNewWindow.submit(false)" />
+                <input type="submit" value="Beautify In New Page" class="btn btn-xs btn-info" onclick="OpenInNewWindow.submit(true)" />
+                <input type="button" value="Copy To Clipboard" class="btn btn-xs btn-info" onClick="copyToClipboard();">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            @Html.TextAreaFor(m => m.Beautify.BeautifiedStr, new { @class = "form-control", @rows = "100" , id= "beautifiedTextArea" })
+        </div>
+    </div>
+</form>
+
 
 
