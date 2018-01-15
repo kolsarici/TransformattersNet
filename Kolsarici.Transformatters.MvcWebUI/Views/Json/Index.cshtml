@@ -35,7 +35,7 @@
                 <input type="button" value="Select Text" class="btn btn-xs btn-info" onClick="javascript:this.form.beautifiedTextArea.focus();this.form.beautifiedTextArea.select();">
             </div>
             <div class="form-group">
-                <textarea asp-for="Beautify.BeautifiedStr" class="form-control" rows="20" id="comment2" name="beautifiedTextArea"></textarea>
+                @Html.TextAreaFor(m => m.Beautify.BeautifiedStr, new { @class = "form-control", @rows = "20" })
             </div>
         </form>
     </div>

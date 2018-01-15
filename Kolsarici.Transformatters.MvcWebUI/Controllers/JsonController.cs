@@ -20,7 +20,7 @@ namespace Kolsarici.Transformatters.MvcWebUI.Controllers
         {
             var model = new BeautifyViewModel
             {
-                Beautify = new Beautify()
+                Beautify = Session["BeautifiedObject"] == null ? new Beautify() : ((Beautify)Session["BeautifiedObject"])
             };
             return View(model);
         }
@@ -30,15 +30,6 @@ namespace Kolsarici.Transformatters.MvcWebUI.Controllers
             return RedirectToAction("Index", "Json");
         }
 
-        public ActionResult Converted(Beautify b)
-        {
-            var model = new BeautifyViewModel
-            {
-                Beautify = b
-            };
-            return View(model);
-        }
-
         [HttpPost]
         public ActionResult Index(Beautify beautify)
         {
@@ -46,8 +37,9 @@ namespace Kolsarici.Transformatters.MvcWebUI.Controllers
             var bb = new Beautify();
             bb.Str = beautify.Str;
             bb.BeautifiedStr = _jsonService.Beautify(beautify.Str);
+            Session.Add("BeautifiedObject", bb);
 
-            return RedirectToAction("Converted", bb);
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
