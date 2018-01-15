@@ -16,7 +16,7 @@ namespace Kolsarici.Transformatters.MvcWebUI
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Json", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Json", action = "Root", id = UrlParameter.Optional }
             );
         }
     }

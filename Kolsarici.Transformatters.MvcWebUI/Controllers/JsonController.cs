@@ -25,6 +25,11 @@ namespace Kolsarici.Transformatters.MvcWebUI.Controllers
             return View(model);
         }
 
+        public ActionResult Root()
+        {
+            return RedirectToAction("Index", "Json");
+        }
+
         public ActionResult Converted(Beautify b)
         {
             var model = new BeautifyViewModel
@@ -41,7 +46,7 @@ namespace Kolsarici.Transformatters.MvcWebUI.Controllers
             var bb = new Beautify();
             bb.Str = beautify.Str;
             bb.BeautifiedStr = _jsonService.Beautify(beautify.Str);
-            
+
             return RedirectToAction("Converted", bb);
         }
 
