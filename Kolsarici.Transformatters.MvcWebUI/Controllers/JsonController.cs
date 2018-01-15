@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace Kolsarici.Transformatters.MvcWebUI.Controllers
 {
@@ -45,7 +46,7 @@ namespace Kolsarici.Transformatters.MvcWebUI.Controllers
         [HttpGet]
         public JsonResult BeautifyInNewPage(Beautify beautify)
         {
-            var a = _jsonService.Desrialize(beautify.Str);
+            var a = new JavaScriptSerializer().DeserializeObject(beautify.Str);
             return Json(a, JsonRequestBehavior.AllowGet);
         }
     }
