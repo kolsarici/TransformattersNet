@@ -43,9 +43,13 @@ namespace Kolsarici.Transformatters.MvcWebUI.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpGet]
+        [HttpPost]
         public JsonResult BeautifyInNewPage(Beautify beautify)
         {
+            if (beautify.Str == null)
+            {
+                beautify.Str = "";
+            }
             var a = new JavaScriptSerializer().DeserializeObject(beautify.Str);
             return Json(a, JsonRequestBehavior.AllowGet);
         }
