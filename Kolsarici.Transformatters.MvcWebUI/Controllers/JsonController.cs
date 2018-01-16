@@ -46,11 +46,19 @@ namespace Kolsarici.Transformatters.MvcWebUI.Controllers
         [HttpPost]
         public JsonResult BeautifyInNewPage(Beautify beautify)
         {
+            object a;
             if (beautify.Str == null)
             {
                 beautify.Str = "";
             }
-            var a = new JavaScriptSerializer().DeserializeObject(beautify.Str);
+            try
+            {
+                a = new JavaScriptSerializer().DeserializeObject(beautify.Str);
+            }
+            catch
+            {
+                a = _jsonService.Beautify(beautify.Str);
+            }
             return Json(a, JsonRequestBehavior.AllowGet);
         }
     }
