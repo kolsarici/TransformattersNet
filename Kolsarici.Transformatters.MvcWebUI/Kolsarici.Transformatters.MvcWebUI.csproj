@@ -91,6 +91,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="package.json" />
     <None Include="packages.config" />
     <Content Include="Views\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
