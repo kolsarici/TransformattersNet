@@ -93,6 +93,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="wwwroot\bootstrap\css\bootstrap.min.css" />
+    <Content Include="wwwroot\bootstrap\js\bootstrap.min.js" />
+    <Content Include="wwwroot\jquery\jquery-3.3.1.min.js" />
     <Content Include="wwwroot\monaco-editor\dev\vs\base\worker\workerMain.js" />
     <Content Include="wwwroot\monaco-editor\dev\vs\basic-languages\bat\bat.contribution.js" />
     <Content Include="wwwroot\monaco-editor\dev\vs\basic-languages\bat\bat.js" />
