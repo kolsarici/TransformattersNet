@@ -5,9 +5,20 @@
 }
 <script>
     function copyToClipboard() {
-        var copyText = document.getElementById("beautifiedTextArea");
-        copyText.select();
-        document.execCommand("Copy");
+        // Create a dummy input to copy the string array inside it
+        var dummy = document.createElement("input");
+        // Add it to the document
+        document.body.appendChild(dummy);
+        // Set its ID
+        dummy.setAttribute("id", "dummy_id");
+        // Output the array into it
+        document.getElementById("dummy_id").value = @Html.Raw(JsonConvert.SerializeObject(this.Model.Beautify.BeautifiedStr));
+        // Select it
+        dummy.select();
+        // Copy its contents
+        document.execCommand("copy");
+        // Remove it as its not needed anymore
+        document.body.removeChild(dummy);
     }
     var OpenInNewWindow = {
 
@@ -33,7 +44,7 @@
 <script>
     var data = @Html.Raw(JsonConvert.SerializeObject(this.Model.Beautify.BeautifiedStr));
 
-    require.config({ paths: { 'vs': '../node_modules/monaco-editor/min/vs' } });
+    require.config({ paths: { 'vs': '../wwwroot/monaco-editor/min/vs' } });
 
     require(['vs/editor/editor.main'], function () {
         window.editor = monaco.editor.create(document.getElementById('container'), {
