@@ -93,8 +93,33 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="wwwroot\bootstrap\css\bootstrap.min.css" />
-    <Content Include="wwwroot\bootstrap\js\bootstrap.min.js" />
+    <Content Include="wwwroot\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="wwwroot\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="wwwroot\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="wwwroot\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="wwwroot\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="wwwroot\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="wwwroot\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="wwwroot\bootstrap\dist\js\npm.js" />
+    <Content Include="wwwroot\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="wwwroot\bootstrap\Gruntfile.js" />
+    <Content Include="wwwroot\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="wwwroot\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="wwwroot\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="wwwroot\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="wwwroot\bootstrap\grunt\change-version.js" />
+    <Content Include="wwwroot\bootstrap\js\affix.js" />
+    <Content Include="wwwroot\bootstrap\js\alert.js" />
+    <Content Include="wwwroot\bootstrap\js\button.js" />
+    <Content Include="wwwroot\bootstrap\js\carousel.js" />
+    <Content Include="wwwroot\bootstrap\js\collapse.js" />
+    <Content Include="wwwroot\bootstrap\js\dropdown.js" />
+    <Content Include="wwwroot\bootstrap\js\modal.js" />
+    <Content Include="wwwroot\bootstrap\js\popover.js" />
+    <Content Include="wwwroot\bootstrap\js\scrollspy.js" />
+    <Content Include="wwwroot\bootstrap\js\tab.js" />
+    <Content Include="wwwroot\bootstrap\js\tooltip.js" />
+    <Content Include="wwwroot\bootstrap\js\transition.js" />
     <Content Include="wwwroot\jquery\jquery-3.3.1.min.js" />
     <Content Include="wwwroot\monaco-editor\dev\vs\base\worker\workerMain.js" />
     <Content Include="wwwroot\monaco-editor\dev\vs\basic-languages\bat\bat.contribution.js" />
@@ -987,6 +1012,26 @@
     <Content Include="wwwroot\monaco-editor\min-maps\vs\loader.js.map" />
     <Content Include="wwwroot\monaco-editor\package.json" />
     <Content Include="wwwroot\monaco-editor\README.md" />
+    <Content Include="wwwroot\bootstrap\CHANGELOG.md" />
+    <Content Include="wwwroot\bootstrap\LICENSE" />
+    <Content Include="wwwroot\bootstrap\package.json" />
+    <Content Include="wwwroot\bootstrap\README.md" />
+    <Content Include="wwwroot\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="wwwroot\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="wwwroot\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="wwwroot\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="wwwroot\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="wwwroot\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="wwwroot\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="wwwroot\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="wwwroot\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="wwwroot\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="wwwroot\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="wwwroot\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="wwwroot\bootstrap\grunt\.jshintrc" />
+    <Content Include="wwwroot\bootstrap\grunt\configBridge.json" />
+    <Content Include="wwwroot\bootstrap\grunt\npm-shrinkwrap.json" />
+    <Content Include="wwwroot\bootstrap\grunt\sauce_browsers.yml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
