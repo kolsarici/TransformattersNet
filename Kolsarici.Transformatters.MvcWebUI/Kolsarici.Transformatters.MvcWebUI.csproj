@@ -895,7 +895,6 @@
     <Content Include="wwwroot\monaco-editor\esm\vs\platform\keybinding\common\resolvedKeybindingItem.js" />
     <Content Include="wwwroot\monaco-editor\esm\vs\platform\keybinding\common\usLayoutResolvedKeybinding.js" />
     <Content Include="wwwroot\monaco-editor\esm\vs\platform\list\browser\listService.js" />
-    <Content Include="wwwroot\monaco-editor\esm\vs\platform\log\common\log.js" />
     <Content Include="wwwroot\monaco-editor\esm\vs\platform\markers\common\markers.js" />
     <Content Include="wwwroot\monaco-editor\esm\vs\platform\markers\common\markerService.js" />
     <Content Include="wwwroot\monaco-editor\esm\vs\platform\notification\common\notification.js" />
@@ -1066,7 +1065,9 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="wwwroot\monaco-editor\esm\vs\platform\log\common\" />
+  </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="wwwroot\monaco-editor\esm\vs\editor\editor.api.d.ts" />
     <TypeScriptCompile Include="wwwroot\monaco-editor\monaco.d.ts" />
