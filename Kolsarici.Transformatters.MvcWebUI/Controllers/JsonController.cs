@@ -10,6 +10,7 @@ using System.Web.Script.Serialization;
 
 namespace Kolsarici.Transformatters.MvcWebUI.Controllers
 {
+    [ValidateInput(false)]
     public class JsonController : Controller
     {
         private IJsonService _jsonService;
